@@ -1,0 +1,22 @@
+.home{
+  width: 750rpx;
+  background-color: #f8f8f8;
+}
+.none{
+  width: 710rpx;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 20rpx 15rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.line{
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: #ff6868;
+}
+.marginLeft{
+  margin-left: 20rpx;
+}

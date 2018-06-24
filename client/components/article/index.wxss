@@ -1,0 +1,53 @@
+.article{
+  width: 710rpx;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.contents{
+  display: flex;
+  box-sizing: border-box;
+  padding: 0 20rpx 20rpx 20rpx;
+  border-bottom: #fdfdfd 1px solid;
+}
+.title-wrap{
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+}
+.origin{
+  flex: 1;
+  text-align: right;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: #59c83b;
+}
+.title{
+  width: 520rpx;
+  font-size: 35rpx;
+  font-family: PingFangSC-Regular;
+  color: #666666;
+  font-weight: bold;
+}
+.intro{
+  font-size: 30rpx;
+  font-family: sans-serif;
+  color: #333333;
+  display: -webkit-box ;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; 
+}
+.twoline{
+  display: -webkit-box ;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+}

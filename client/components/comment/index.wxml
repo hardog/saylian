@@ -1,0 +1,5 @@
+<view class="comment">
+  <input placeholder="填写评论" value="{{content}}"
+  placeholder-class="holdplacecls" class="content" bindinput="confirm"></input>
+  <view class="submit" bindtap="submit"><text class="submitTxt">提交</text></view>
+</view>

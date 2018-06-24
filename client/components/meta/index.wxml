@@ -1,0 +1,11 @@
+<view class="meta">
+  <view wx:for="{{items}}" 
+    wx:if="{{item.active}}"
+    wx:key="{{index}}" 
+    class="item" 
+    data-v="{{item}}"
+    bindtap="taped">
+    <image src="{{item.taped ? item.tapedIcon : item.icon}}" class="icon" />
+    <text class="count">{{item.count}}</text>
+  </view>
+</view>

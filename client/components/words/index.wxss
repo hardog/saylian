@@ -1,0 +1,34 @@
+.words{
+  width: 710rpx;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+}
+.title{
+  font-size: 40rpx;
+  font-family: PingFangSC-Regular;
+  color: #aaaaaa;
+  font-weight: bold;
+}
+.dict{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+.origin{
+  font-size: 35rpx;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+  margin: 3rpx;
+  box-sizing: border-box;
+  padding: 4rpx 8rpx;
+  border-radius: 6rpx;
+  background-color: #59c83b;
+}
+.translate{
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: #59c83b;
+}

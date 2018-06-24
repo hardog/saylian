@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "ADetail": "/components/adetail/index",
+    "Meta": "/components/meta/index",
+    "Audio": "/components/audio/index",
+    "Login": "/components/login/index",
+    "Comment": "/components/comment/index"
+  }
+}

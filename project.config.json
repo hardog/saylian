@@ -1,0 +1,17 @@
+{
+	"client": "./client",
+	"svr": "./server",
+	"miniprogramRoot": "./client",
+	"qcloudRoot": "./server",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"libVersion": "2.0.8",
+	"appid": "wxd87fd87a037b1a10",
+	"projectname": "saylian",
+	"condition": {}
+}

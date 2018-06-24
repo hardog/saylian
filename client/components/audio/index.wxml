@@ -1,0 +1,5 @@
+<view class="play-wrapper" bindtap="play" style="width: {{size}}rpx;height: {{size}}rpx;border-radius: {{size/2}}rpx">
+  <image class="play" style="width: {{size/2}}rpx;height: {{size/2}}rpx;" src="{{start ? icon.pause : icon.start}}"/>
+</view>
+  
+

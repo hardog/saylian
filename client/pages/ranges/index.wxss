@@ -1,0 +1,154 @@
+.daily{
+  width: 750rpx;
+  background-color: #f8f8f8;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  box-sizing: border-box;
+}
+.contents{
+  width: 710rpx;
+  box-sizing: border-box;
+  padding: 20rpx 40rpx;
+  margin-left: 20rpx;
+  background-color: #ffffff;
+  border-radius: 6rpx;
+  text-align: center;
+
+}
+.words{
+  width: 670rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.word{
+  font-size: 40rpx;
+  font-family: PingFangSC-Regular;
+  color: #666666;
+  text-align: center;
+  margin: 0 5rpx;
+  font-weight: bold;
+}
+.translate{
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: #666666;
+  display: -webkit-box ;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+  margin-top: 10rpx;
+}
+.action{
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 10rpx 60rpx;
+  margin-top: 20rpx;
+}
+.followed{
+   justify-content: center;
+}
+.unfollow{
+   justify-content: space-around;
+}
+.read,
+.listen,
+.submit{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.read,
+.listen{
+  background-color: #666666;
+}
+.submit{
+  background-color: #59c83b;
+}
+
+.voice{
+  width: 45rpx;
+  height: 45rpx;
+}
+.read-text,
+.listen-text,
+.submit-text{
+  font-size: 25rpx;
+  color: #ffffff;
+}
+.follows{
+  width: 710rpx;
+  margin-left: 20rpx;
+  margin-top: 30rpx;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  border-radius: 6rpx;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10rpx;
+  padding: 20rpx;
+  background-color: #ffffff;
+}
+.range{
+  width: 40rpx;
+  font-size: 35rpx;
+  color: #59c83b;
+  margin-right: 20rpx;
+  font-weight: bold;
+  display: -webkit-box ;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; 
+}
+.avator{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 35rpx;
+  margin-right: 30rpx;
+}
+.nick{
+  font-size: 30rpx;
+  color: #333333;
+  margin-right: 280rpx;
+}
+.thumbsup{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 20rpx;
+}
+.likes{
+  font-size: 30rpx;
+  color: #59c83b;
+  margin-left: 5rpx;
+}
+
+.sticky{
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #59c83b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.home{
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+}

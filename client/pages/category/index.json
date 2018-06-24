@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "Article": "/components/article/index",
+    "Hackv": "/components/hackv/index",
+    "Login": "/components/login/index"
+  }
+}

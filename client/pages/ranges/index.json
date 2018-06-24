@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Audio": "/components/audio/index",
+    "Login": "/components/login/index"
+  }
+}

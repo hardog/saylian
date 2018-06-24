@@ -1,0 +1,29 @@
+<view class="words" style="min-height: {{height}}px">
+  <view class="nowords-wrap" wx:if="{{nowords}}">
+    <text class="nowords">还没有收藏单词了，赶紧去学习新单词吧!</text>
+  </view>
+  <view class="words1" wx:if="{{!nowords}}">
+    <view class="word {{'height' + item.rand}}" 
+          wx:for="{{words1}}" 
+          wx:key="{{index}}">
+      <view class="action">
+        <text class="navToDetail" data-v="{{item}}" bindtap="navToDetail">查看原文</text>
+        <text class="createdTime">{{item.date}}</text>
+      </view>
+      <text class="wordtxt" bindtap="wordtap" data-v="{{item.word}}">{{item.word}}</text>
+    </view>
+  </view>
+  <view class="words2" wx:if="{{!nowords}}">
+    <view class="word {{'height' + item.rand}}"
+          data-v="{{item.word}}"
+          wx:for="{{words2}}" 
+          wx:key="{{index}}">
+      <view class="action">
+        <text class="navToDetail" data-v="{{item}}" bindtap="navToDetail">查看原文</text>
+        <text class="createdTime">{{item.date}}</text>
+      </view>
+      <text class="wordtxt" bindtap="wordtap" data-v="{{item.word}}">{{item.word}}</text>
+    </view>
+  </view>
+  <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>
+</view>

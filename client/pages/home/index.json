@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "Daily": "/components/daily/index",
+    "Article": "/components/article/index",
+    "Words": "/components/words/index",
+    "Login": "/components/login/index",
+    "Hackv": "/components/hackv/index"
+  }
+}

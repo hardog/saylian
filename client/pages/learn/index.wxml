@@ -1,0 +1,31 @@
+<view style="height: {{height}}px">
+  <scroll-view scroll-y="{{true}}" 
+  bindscrolltolower="loadMoreComment"
+  style="height: {{height}}px" 
+  class="learn {{learn.type == 2 ? 'videoPadding' : 'articlePadding'}}">
+    <ADetail contentid="{{id}}" source="{{contents}}" words="{{words}}"/>
+    <Comment contentid="{{id}}" bindcommentOk="updateComments"/>
+    <view class="comments">
+      <view class="comment" wx:for="{{comments}}" wx:key="index">
+        <image src="{{item.avator}}" class="avator"/>
+        <text class="commentTxt">{{item.content}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="{{learn.type == 2 ? 'videoAction' : 'action'}}" >
+    <video id="video"
+          wx:if="{{learn.type == 2}}"
+          src="{{prefix}}{{learn.path}}"
+          class="video" 
+          custom-cache="{{false}}"
+          poster="{{prefix}}{{learn.poster}}"
+          controls></video>
+    <Audio wx:else source="{{learn}}" />
+    <Meta source="{{learn}}" class="{{learn.type == 2 ? 'videoMeta' : 'meta'}}" ctype="contentLike"/>
+  </view>
+  <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>
+  <view class="sticky" bindtap="backHome" wx:if="{{showBack}}">
+    <text class="home">首页</text>
+  </view>
+</view>
+

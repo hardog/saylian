@@ -1,0 +1,19 @@
+<view class="mine" style="height: {{height}}px">
+  <view class="head">
+    <image src="{{userInfo.avatarUrl}}" class="avator"/>
+    <text class="nick">{{userInfo.nickName}}</text>
+  </view>
+  <view class="line" bindtap="goMyWordsNote">
+    <text class="lineText">我的单词本</text>
+    <image src="../../images/rightarrow.png" class="go"/>
+  </view>
+  <view class="line" bindtap="goFeatures">
+    <text class="lineText">功能列表</text>
+    <image src="../../images/rightarrow.png" class="go"/>
+  </view>
+  <view class="line" bindtap="goFeedback">
+    <text class="lineText">去反馈</text>
+    <image src="../../images/rightarrow.png" class="go"/>
+  </view>
+  <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>
+</view>

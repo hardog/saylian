@@ -1,0 +1,26 @@
+<view class="adetail">
+  <block wx:if="{{started}}">
+    <view class="articles" wx:for="{{contents}}" wx:key="{{index}}">
+      <text class="text {{windex === 0 ? 'first' : ''}}" 
+          wx:for="{{item}}" 
+          wx:for-item="word"
+          wx:for-index="windex"
+          bindtap="goTranslate" 
+          data-v="{{word}}"  
+          wx:key="{{windex}}">{{word}}</text>
+    </view>
+  </block>
+  <view class="learn-action">
+    <view wx:if="{{!started}}" class="start" bindtap="startLearn">
+      <text class="learn-action-text">开始学习</text>
+    </view>
+    <view wx:else class="end" bindtap="endLearn">
+      <text class="learn-action-text">{{finished ? '恭喜您已完成学习, 继续加油哦' : '结束学习'}}</text>
+    </view>
+  </view>
+  <view class="words" wx:if="{{words.length > 0}}">
+    <text class="mark">生词复习:</text>
+    <text class="word" wx:for="{{words}}" bindtap="goTranslate" data-v="{{item}}" wx:key="{{index}}">{{item}}</text>
+  </view>
+</view>
+

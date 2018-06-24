@@ -1,0 +1,31 @@
+<view class="features">
+  <text class="version">【0.1.6】 2018-06-27</text>
+  <text class="line">1、缺陷修复(分享图片修改、分享后评论按钮被遮挡等）</text>
+  <text class="line">2、新增个人学习海报</text>
+  <text class="line">3、文章学习效果检验之----完形填空</text>
+  
+  <text class="version">【0.1.5.1】 2018-06-22</text>
+  <text class="line">1、缺陷修复</text>
+  <text class="line">2、新增功能列表</text>
+
+  <text class="version">【0.1.5】 2018-06-18</text>
+  <text class="line">1、分类新增短文学习</text>
+  <text class="line">2、分类新增跟着视频学习</text>
+  <text class="line">3、分类新增【随便看看】，分享精选视频</text>
+  <text class="line">4、首页新增每日一句以及跟读</text>
+  <text class="line">5、首页新增单词复习，单词为未完成学习任务的收藏单词</text>
+  <text class="line">6、新增学习文章评论</text>
+
+  <text class="version">【0.1.1 ～ 0.1.4】 优化以及缺陷修复</text>
+
+  <text class="version">【0.1.0】 2018-05-28</text>
+  <text class="line">1、新增我的单词本</text>
+  <text class="line">2、登录功能</text>
+  <text class="line">3、添加分类&我的tab</text>
+  <text class="line">4、接入单词点击实时翻译（有道）</text>
+  <text class="line">5、连续点按单词可收藏词组（1.2s内）</text>
+
+  <view class="sticky" bindtap="backHome" wx:if="{{showBack}}">
+    <text class="home">首页</text>
+  </view>
+</view>

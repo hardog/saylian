@@ -1,0 +1,5 @@
+<view class="feedback" style="height: {{height}}px">
+  <text class="notice">欢迎提交反馈哦，可以在这里说出你想要的功能、说练的不足及缺陷</text>
+  <textarea placeholder="填写反馈" value="{{content}}" placeholder-class="holdplacecls" class="content" bindinput="confirm"></textarea>
+  <view class="submit" bindtap="submit"><text class="submitTxt">提交</text></view>
+</view>

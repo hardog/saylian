@@ -1,0 +1,9 @@
+<view class="login-wrapper">
+  <view class="mask"/>
+  <view class="login">
+    <image class="uva" src="{{headurl}}"/>
+    <view class="title">{{title}}</view>
+    <button class="action" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfo">登录</button>
+  </view>
+</view>
+

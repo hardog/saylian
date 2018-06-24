@@ -1,0 +1,11 @@
+<view class="words out-cls">
+  <text class="title">单词复习</text>
+  <view class="dict">
+    <text class="origin" 
+          bindtap="wordtap"
+          data-v="{{item.word}}"
+          wx:for="{{source}}" 
+          wx:key="{{index}}">{{item.word}}</text>
+  </view>
+</view>
+

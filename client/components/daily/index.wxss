@@ -1,0 +1,95 @@
+.card{
+  width: 710rpx;
+  height: 600rpx;
+  /* height: 350rpx; */
+  background-color: #ffffff;
+  position: relative;
+  margin: 20rpx 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.dailytitle{
+  position: absolute;
+  top: 10rpx;
+  left: 20rpx;
+  font-size: 30rpx;
+  color: #ffffff;
+}
+.poster{
+  width: 710rpx;
+  height: 600rpx;
+  position: absolute;
+  opacity: 0.8;
+  left: 0;
+  top: 0;
+}
+.action{
+  width: 400rpx;
+  position: absolute;
+  bottom: 40rpx;
+  left: 155rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.like-wrap,
+.follow{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 60rpx;
+  background-color: #59c83b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.like{
+  width: 70rpx;
+  height: 70rpx;
+}
+.follow-text{
+  color: #ffffff;
+  border-radius: 30rpx;
+  font-size: 30rpx;
+}
+.center{
+  width: 660rpx;
+  height: 410rpx;
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.words{
+  width: 660rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.translate{
+  width: 660rpx;
+  color: #ffffff;
+  text-align: center;
+  font-size: 40rpx;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box ;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+  margin-top: 10rpx;
+}
+.word{
+  font-size: 40rpx;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 5rpx;
+  font-weight: bold;
+}

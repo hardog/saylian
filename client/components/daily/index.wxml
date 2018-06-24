@@ -1,0 +1,21 @@
+<view class="card">
+  <image src="{{prefix}}{{source.poster}}" class="poster" mode="aspectFill"/>
+  <text class="dailytitle">每日一句</text>
+  <view class="center">
+    <view class="words">
+      <text wx:for="{{words}}" 
+            wx:key="index"
+            bindtap="wordtaped" 
+            data-v="{{item}}" 
+            class="word">{{item}}</text>
+    </view>
+    <text class="translate">{{source.translate}}</text>
+  </view>
+  <view class="action">
+    <Audio source="{{source}}" size="100"/>
+    <view class="follow" bindtap="goRead"><text class="follow-text">跟读</text></view>
+    <view class="like-wrap" bindtap="like">
+      <image src="{{icon}}" class="like" />
+    </view>
+  </view>
+</view>

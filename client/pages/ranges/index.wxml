@@ -1,0 +1,39 @@
+<view class="daily" style="min-height: {{height}}px">
+  <view class="contents">
+    <view class="words">
+      <text wx:for="{{words}}" 
+            wx:key="index"
+            bindtap="wordtaped" 
+            data-v="{{item}}" 
+            class="word">{{item}}</text>
+    </view>
+    <text class="translate">{{daily.translate}}</text>
+    <view class="action {{curUserFollowed <= 0 ? 'unfollow' : 'followed'}}">
+      <Audio source="{{daily}}" size="80"/>
+      <view wx:if="{{curUserFollowed <= 0}}" class="read" bindtap="followRead">
+        <image wx:if="{{!readingText}}" src="../../images/voice.png" class="voice" mode="aspectFill" />
+        <text wx:else class="read-text">{{readingText}}</text>
+      </view>
+      <view wx:if="{{curUserFollowed <= 0}}" class="listen" bindtap="listen">
+        <text class='listen-text'>{{isListening ? '~' : '试听'}}</text>
+      </view>
+      <view wx:if="{{curUserFollowed <= 0}}" class="submit" bindtap="submit">
+        <text class='submit-text'>提交</text>
+      </view>
+    </view>
+  </view>
+  <scroll-view class="follows" scroll-y="{{true}}">
+    <view class="item" wx:for="{{follows}}" wx:key="{{index}}">
+      <text class="range">{{index + 1}}</text>
+      <image src="{{item.avator}}" class="avator" />
+      <text class="nick">{{item.nick}}</text>
+      <Audio source="{{item}}" size="50"/>
+      <image src="{{item.thumbed ? thumb.liked : thumb.like}}" bindtap="thumbs" data-v="{{item}}" class="thumbsup"/>
+      <text class="likes">{{item.like}}</text>
+    </view>
+  </scroll-view>
+  <view class="sticky" bindtap="backHome" wx:if="{{showBack}}">
+    <text class="home">首页</text>
+  </view>
+</view>
+

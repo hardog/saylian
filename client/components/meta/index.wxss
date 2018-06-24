@@ -1,0 +1,22 @@
+.meta{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20rpx 0;
+  border-top: #f8f8f8 1px solid;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+}
+.icon{
+  width: 40rpx;
+  height: 40rpx;
+  margin: 0 10rpx;
+}
+.count{
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: #8a8a8a;
+}
