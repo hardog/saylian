@@ -12,7 +12,7 @@
   padding: 20rpx 20rpx;
 }
 .title{
-  width: 520rpx;
+  flex: 1;
   font-family: PingFangSC-Regular;
   font-size: 35rpx;
   color: #666666;
@@ -28,7 +28,7 @@
   -webkit-line-clamp: 2; 
 }
 .learn-action{
-  flex: 1;
+  width: 100rpx;
   font-family: PingFangSC-Regular;
   font-size: 30rpx;
   text-align: right;
