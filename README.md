@@ -88,14 +88,14 @@
     table.timestamp('created_at').defaultTo(Db.fn.now());
 ```
 # 基本认知
-
+```
 学英语重点包括：听力、口语、发音、阅读
 辅助学习类型：音频、视频、文章及结合互动
 Phase1: 听力&生词
 Phase2: 口语
 Phase3: 阅读
 Phase4: 发音
-
+```
 # License
 
 The project is released under the terms of the MIT.
