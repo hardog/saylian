@@ -1,4 +1,4 @@
-const secure = require('./.secure');
+const secure = require('./secure.js');
 
 const CONF = {
     port: '5757',
