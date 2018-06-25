@@ -7,7 +7,8 @@
     "pages/wordsnote/index",
     "pages/category/index",
     "pages/learn/index",
-    "pages/features/index"
+    "pages/features/index",
+    "pages/check/index"
   ],
   "window":{
     "backgroundColor":"#F6F6F6",
