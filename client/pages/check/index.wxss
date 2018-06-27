@@ -1,0 +1,76 @@
+.check{
+  background-color: #f8f8f8;
+}
+.sentences{
+  display: flex;
+  width: 750rpx;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #ffffff;
+}
+.input{
+  margin: 0 5rpx;
+  border-bottom: 1px solid #666666;
+  color: #59c83b;
+  text-align: center;
+}
+.word{
+  margin: 0 5rpx;
+  display: flex;
+  flex-direction: row;
+}
+.action{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20rpx;
+}
+.continue,
+.submit{
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notice{
+  color: #ff6868;
+  font-size: 20rpx;
+  margin-left: 20rpx;
+}
+.continue{
+  width: 150rpx;
+  background-color: #ff6868;
+  font-size: 30rpx;
+  color: #ffffff;
+}
+.submit{
+  width: 550rpx;
+  margin-left: 10rpx;
+  background-color: #59c83b;
+}
+.action-text{
+  font-size: 30rpx;
+  color: #ffffff;
+}
+.sticky{
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #59c83b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.home{
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+}

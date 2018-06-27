@@ -1,0 +1,17 @@
+<view style="height: {{height}}px;" class="check">
+  <view class="sentences">
+    <block wx:for="{{words}}" wx:key="{{index}}"><input wx:if="{{item.real}}" style="width: {{item.width}}px" class="input" bindinput="wordinput" data-v="{{item}}"/><text wx:else class="word">{{item.word}}</text></block>
+  </view>
+  <text class="notice">单词拼写、大小写必须都正确哦！</text>
+  <view class="action">
+    <navigator class="continue" open-type="navigateBack">继续学习</navigator>
+    <view class="submit" bindtap="check">
+      <text class="action-text">提交</text>
+    </view>
+  </view>
+  <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>
+  <view class="sticky" bindtap="backHome" wx:if="{{showBack}}">
+    <text class="home">首页</text>
+  </view>
+</view>
+

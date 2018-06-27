@@ -87,22 +87,10 @@ Component({
       }, 'POST');
     },
     endLearn() {
-      if (this.data.finished){return;}
-      wx.showModal({
-        content: '每一篇文章认认真真过关学完才能进步哦～',
-        cancelText: '再学学',
-        confirmText: '确认学完',
-        success: (res) => {
-          if (res.confirm) {
-            Utils.request(Config.service.endTask, {
-              contentid: this.data.contentid
-            },
-            (data) => {
-              this.setData({ finished: true });
-            }, 'POST');
-          }
-        }
-      })
+      if (this.data.finished) { return; }
+      wx.navigateTo({
+        url: '../../pages/check/index?id=' + this.data.contentid
+      });
     }
   }
 })
