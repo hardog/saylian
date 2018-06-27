@@ -15,7 +15,7 @@
       <text class="learn-action-text">开始学习</text>
     </view>
     <view wx:else class="end" bindtap="endLearn">
-      <text class="learn-action-text">{{finished ? '恭喜您已完成学习, 继续加油哦' : '结束学习'}}</text>
+      <text class="learn-action-text">{{finished ? '恭喜您已完成学习, 继续加油哦' : '我要通关'}}</text>
     </view>
   </view>
   <view class="words" wx:if="{{words.length > 0}}">
