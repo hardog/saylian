@@ -1,4 +1,4 @@
-<view style="height: {{height}}px">
+<view style="height: {{height}}px" class="learn-wrapper">
   <scroll-view scroll-y="{{true}}" 
   bindscrolltolower="loadMoreComment"
   style="height: {{height}}px" 

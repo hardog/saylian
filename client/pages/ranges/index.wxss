@@ -2,7 +2,7 @@
   width: 750rpx;
   background-color: #f8f8f8;
   padding-top: 20rpx;
-  padding-bottom: 20rpx;
+  padding-bottom: 120rpx;
   box-sizing: border-box;
 }
 .contents{

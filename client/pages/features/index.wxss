@@ -3,7 +3,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: 20rpx;
+  padding: 20rpx 20rpx 100rpx 20rpx;
 }
 .version{
   font-size: 35rpx;

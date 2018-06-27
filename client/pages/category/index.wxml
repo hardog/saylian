@@ -23,8 +23,8 @@
               wx:for-item="v"
               wx:key="{{vindex}}">
               <Article wx:if="{{v.type == 1}}" source="{{v}}" out-cls="marginLeft"/>
-              <Hackv wx:elif="{{v.type == 2}}" source="{{v}}" hide="{{hackvHide}}" needLearn out-cls="marginLeft"/>
-              <Hackv wx:else source="{{v}}" ctype="videoLike" hide="{{hackvHide}}"  out-cls="marginLeft" disable="{{['study', 'comment']}}"/>
+              <Hackv bindshow="hackvShow" wx:elif="{{v.type == 2}}" source="{{v}}" needLearn out-cls="marginLeft"/>
+              <Hackv bindshow="hackvShow"  wx:else source="{{v}}" ctype="videoLike" out-cls="marginLeft" disable="{{['study', 'comment']}}"/>
             </block>
             <view class="holdBottom"/>
         </scroll-view>
@@ -32,4 +32,7 @@
     </block>
   </swiper>
   <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>
+  <view wx:if="{{flShow}}" bindtap="fullscreenHide" class="fullscreen" style="height: {{height}}px">
+    <video src="{{prefix}}{{currentPath}}" class="video" autoplay/>
+  </view>
 </view>

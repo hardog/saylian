@@ -1,3 +1,9 @@
+.learn-wrapper{
+  width: 750rpx;
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+  display: flex;
+}
 .learn{
   width: 750rpx;
   background-color: #f8f8f8;

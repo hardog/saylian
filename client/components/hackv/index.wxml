@@ -1,5 +1,5 @@
 <view class="hackv out-cls">
-  <view class="posterWrap"  bindtap="goWatch">
+  <view class="posterWrap" bindtap="goWatch">
     <view class="playWrap"><image src="../../images/play.png" class="play" /></view>
     <image src="{{prefix}}{{source.poster}}" class="poster" mode="aspectFit"/>
   </view>
@@ -8,8 +8,5 @@
     <text wx:if="{{needLearn}}" class="learn-action" bindtap="goLearn">去学习</text>
   </view>
   <Meta source="{{source}}" disable="{{disable}}" ctype="{{ctype}}" />
-  <view wx:if="{{flShow}}" bindtap="fullscreenHide" class="fullscreen" style="height: {{height}}px">
-    <video src="{{prefix}}{{source.path}}" class="video" autoplay/>
-  </view>
 </view>
 

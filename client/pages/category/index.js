@@ -20,9 +20,10 @@ Page({
     size: 10,
     current: 0,
     userInfo: {},
+    flShow: false,
+    currentPath: '',
     loginShow: false,
-    showed: false,
-    hackvHide: false
+    showed: false
   },
 
   /**
@@ -92,6 +93,17 @@ Page({
     };
   },
 
+  fullscreenHide() {
+    this.setData({ flShow: false });
+  },
+
+  hackvShow(evt){
+    this.setData({
+      flShow: true,
+      currentPath: evt.detail
+    });
+  },
+
   onBindUserInfo(evt) {
     const userInfo = (evt.detail || {});
 
@@ -103,7 +115,7 @@ Page({
   },
 
   onTabTap(evt){
-    this.setData({ hackvHide: !this.data.hackvHide });
+    this.setData({ flShow: false });
     if (this.data.loginShow){return;}
     const current = parseInt(evt.currentTarget.dataset.index, 10);
     this.setData({ current });
@@ -114,7 +126,7 @@ Page({
     }
   },
   onSwipeChange(evt){
-    this.setData({ hackvHide: !this.data.hackvHide });
+    this.setData({ flShow: false });
     const current = evt.detail.current;
     this.setData({ current });
     const data = this.data.items[current];
