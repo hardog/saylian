@@ -16,6 +16,8 @@ Page({
       show: false
     },
     height: 1206,
+    flShow: false,
+    currentPath: '',
     loginShow: false,
     showed: false
   },
@@ -77,6 +79,17 @@ Page({
       path: 'pages/home/index',
       imageUrl: '../../images/sl.png'
     };
+  },
+
+  fullscreenHide() {
+    this.setData({ flShow: false });
+  },
+
+  hackvShow(evt) {
+    this.setData({
+      flShow: true,
+      currentPath: evt.detail
+    });
   },
 
   onBindUserInfo(evt) {

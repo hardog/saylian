@@ -17,6 +17,12 @@
     "navigationBarTitleText": "说练英语",
     "navigationBarTextStyle":"black"
   },
+  "plugins": {
+    "tencentvideo": {
+      "version": "1.1.1",
+      "provider": "wxa75efa648b60994b"
+    }
+  },
   "tabBar": {
     "borderStyle": "white",
     "selectedColor": "#59c83b",

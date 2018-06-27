@@ -4,6 +4,7 @@
     "Article": "/components/article/index",
     "Words": "/components/words/index",
     "Login": "/components/login/index",
-    "Hackv": "/components/hackv/index"
+    "Hackv": "/components/hackv/index",
+    "txv-video": "plugin://tencentvideo/video"
   }
 }
