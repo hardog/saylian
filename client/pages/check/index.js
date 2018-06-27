@@ -111,11 +111,11 @@ Page({
     let incre = 0;
     const tmp = [];
     for (let i = 0; i < words.length; i++){
-      const word = (words[i] || '').replace(/\.|,/g, '').trim();
+      const word = (words[i] || '');
       if (randIndexs.indexOf(i) !== -1 && word){
         selectedWords.push(word);
         tmp.push({
-          real: word,
+          real: word.replace(/\.|,/g, '').trim(),
           width: word.length * 12,
           index: incre++
         });
