@@ -95,7 +95,7 @@
 .item{
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between; 
   align-items: center;
   margin-top: 10rpx;
   padding: 20rpx;
@@ -123,7 +123,11 @@
 .nick{
   font-size: 30rpx;
   color: #333333;
-  margin-right: 280rpx;
+  /* margin-right: 280rpx; */
+  max-width: 280rpx;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .thumbsup{
   width: 50rpx;
@@ -134,6 +138,8 @@
   font-size: 30rpx;
   color: #59c83b;
   margin-left: 5rpx;
+  min-width: 30rpx;
+  text-align: center;
 }
 
 .sticky{
@@ -151,4 +157,10 @@
   font-size: 30rpx;
   font-family: PingFangSC-Regular;
   color: #ffffff;
+}
+
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

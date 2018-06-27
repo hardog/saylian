@@ -24,12 +24,16 @@
   </view>
   <scroll-view class="follows" scroll-y="{{true}}">
     <view class="item" wx:for="{{follows}}" wx:key="{{index}}">
-      <text class="range">{{index + 1}}</text>
-      <image src="{{item.avator}}" class="avator" />
-      <text class="nick">{{item.nick}}</text>
-      <Audio source="{{item}}" size="50"/>
-      <image src="{{item.thumbed ? thumb.liked : thumb.like}}" bindtap="thumbs" data-v="{{item}}" class="thumbsup"/>
-      <text class="likes">{{item.like}}</text>
+      <view class="flex-itme-left flex-center">
+        <text class="range">{{index + 1}}</text>
+        <image src="{{item.avator}}" class="avator" />
+        <text class="nick">{{item.nick}}</text>
+      </view>
+      <view class="flex-item-right flex-center">
+        <Audio source="{{item}}" size="50"/>
+        <image src="{{item.thumbed ? thumb.liked : thumb.like}}" bindtap="thumbs" data-v="{{item}}" class="thumbsup"/>
+        <text class="likes">{{item.like}}</text>
+      </view>
     </view>
   </scroll-view>
   <view class="sticky" bindtap="backHome" wx:if="{{showBack}}">
