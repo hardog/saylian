@@ -2,7 +2,7 @@
   <Daily wx:if="{{daily.sentence}}" source="{{daily}}"/>
   <Words wx:if="{{dayAgoWords.length >= 1}}" source="{{dayAgoWords}}" out-cls="marginLeft"/>
   <Article wx:if="{{task.type == 1}}" source="{{task}}" out-cls="marginLeft"/>
-  <Hackv wx:elif="{{task.type == 2}}" needLearn source="{{task}}" out-cls="marginLeft"/>
+  <Hackv bindshow="hackvShow" wx:elif="{{task.type == 2}}" needLearn source="{{task}}" out-cls="marginLeft"/>
   <view class="none">
     <text class="line">1、可以在【分类】中添加学习任务</text>
     <text class="line">2、辅助个人学习英语，前期主要专注听力以及词汇量</text>
@@ -11,4 +11,10 @@
   </view>
 
   <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>
+  <view wx:if="{{flShow}}" bindtap="fullscreenHide" class="fullscreen" style="height: {{height}}px">
+      <txv-video vid="{{currentPath}}" 
+        playerid="gobaltv" 
+        class="video"
+        autoplay="{{true}}"></txv-video>
+  </view>
 </scroll-view>

@@ -33,6 +33,9 @@
   </swiper>
   <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>
   <view wx:if="{{flShow}}" bindtap="fullscreenHide" class="fullscreen" style="height: {{height}}px">
-    <video src="{{prefix}}{{currentPath}}" class="video" autoplay/>
+      <txv-video vid="{{currentPath}}" 
+        playerid="gobaltv" 
+        class="video"
+        autoplay="{{true}}"></txv-video>
   </view>
 </view>

@@ -50,7 +50,7 @@ Component({
       });
     },
 
-    goWatch(evt) {
+    goWatch() {
       this.tick(this.data.source.id, (this.data.ctype == 'contentLike' ? 'content': 'video'), 'watch');
       this.netTypeJudge(() => {
         this.triggerEvent('show', this.data.source.path);
