@@ -4,10 +4,6 @@
   <text class="line">2、将原生插件改为腾讯视频插件</text>
   <text class="line">3、文章学习效果检验之----完形填空</text>
   
-  <text class="version">【0.1.5.1】 2018-06-22</text>
-  <text class="line">1、缺陷修复</text>
-  <text class="line">2、新增功能列表</text>
-
   <text class="version">【0.1.5】 2018-06-18</text>
   <text class="line">1、分类新增短文学习</text>
   <text class="line">2、分类新增跟着视频学习</text>
@@ -15,8 +11,6 @@
   <text class="line">4、首页新增每日一句以及跟读</text>
   <text class="line">5、首页新增单词复习，单词为未完成学习任务的收藏单词</text>
   <text class="line">6、新增学习文章评论</text>
-
-  <text class="version">【0.1.1 ～ 0.1.4】 优化以及缺陷修复</text>
 
   <text class="version">【0.1.0】 2018-05-28</text>
   <text class="line">1、新增我的单词本</text>
