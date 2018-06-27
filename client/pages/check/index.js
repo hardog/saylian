@@ -150,7 +150,7 @@ Page({
 
   check(){
     const checkIndex = this.data.wrongIndex;
-    const len = checkIndex.length;
+    const len = this.data.selectedWords.length;
 
     for(let i = 0; i < len; i++){
       if (!checkIndex[i]){
@@ -167,9 +167,7 @@ Page({
         confirmText: '确定',
         showCancel: false,
         success: (res) => {
-          wx.navigateTo({
-            url: '../../pages/learn/index?id=' + this.data.id
-          });
+          wx.navigateBack({delta: 1});
         }
       })
     }, 'POST');
