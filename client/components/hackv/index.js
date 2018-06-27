@@ -21,20 +21,12 @@ Component({
     needLearn: {
       type: Boolean,
       value: false
-    },
-    hide: {
-      type: Boolean,
-      value: true,
-      observer: function(){
-        this.fullscreenHide();
-      }
     }
   },
   data: {
     prefix: Config.cosPrefix,
     netNoticed: false,
     isLogin: false,
-    flShow: false,
     height: 1206
   },
   ready(){
@@ -58,14 +50,10 @@ Component({
       });
     },
 
-    fullscreenHide() {
-      this.setData({ flShow: false });
-    },
-
     goWatch(evt) {
       this.tick(this.data.source.id, (this.data.ctype == 'contentLike' ? 'content': 'video'), 'watch');
       this.netTypeJudge(() => {
-        this.setData({ flShow: true });
+        this.triggerEvent('show', this.data.source.path);
       });
     },
 
