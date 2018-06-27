@@ -13,7 +13,7 @@
   padding-top: 100rpx;
 }
 .videoPadding{
-  padding-top: 400rpx;
+  padding-top: 520rpx;
 }
 .meta{
   width: 600rpx;
@@ -49,8 +49,8 @@
   margin-left: 20rpx;
 }
 .video{
-  width: 750rpx;
-  height: 300rpx;
+  width: 760rpx;
+  height: 420rpx;
   margin-bottom: 10rpx;
 }
 .sticky{

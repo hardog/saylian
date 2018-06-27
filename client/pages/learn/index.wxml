@@ -13,13 +13,10 @@
     </view>
   </scroll-view>
   <view class="{{learn.type == 2 ? 'videoAction' : 'action'}}" >
-    <video id="video"
-          wx:if="{{learn.type == 2}}"
-          src="{{prefix}}{{learn.path}}"
-          class="video" 
-          custom-cache="{{false}}"
-          poster="{{prefix}}{{learn.poster}}"
-          controls></video>
+    <txv-video vid="{{learn.path}}" 
+      wx:if="{{learn.type == 2}}"
+      playerid="gid"
+      class="video"></txv-video>
     <Audio wx:else source="{{learn}}" />
     <Meta source="{{learn}}" class="{{learn.type == 2 ? 'videoMeta' : 'meta'}}" ctype="contentLike"/>
   </view>

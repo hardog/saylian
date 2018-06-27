@@ -4,6 +4,7 @@
     "Meta": "/components/meta/index",
     "Audio": "/components/audio/index",
     "Login": "/components/login/index",
-    "Comment": "/components/comment/index"
+    "Comment": "/components/comment/index",
+    "txv-video": "plugin://tencentvideo/video"
   }
 }
