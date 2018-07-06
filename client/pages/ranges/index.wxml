@@ -9,7 +9,6 @@
     </view>
     <text class="translate">{{daily.translate}}</text>
     <view class="action {{curUserFollowed <= 0 ? 'unfollow' : 'followed'}}">
-      <Audio source="{{daily}}" size="80"/>
       <view wx:if="{{curUserFollowed <= 0}}" class="read" bindtap="followRead">
         <image wx:if="{{!readingText}}" src="../../images/voice.png" class="voice" mode="aspectFill" />
         <text wx:else class="read-text">{{readingText}}</text>

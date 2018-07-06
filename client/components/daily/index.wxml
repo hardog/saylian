@@ -12,7 +12,6 @@
     <text class="translate">{{source.translate}}</text>
   </view>
   <view class="action">
-    <Audio source="{{source}}" size="100"/>
     <view class="follow" bindtap="goRead"><text class="follow-text">跟读</text></view>
     <view class="like-wrap" bindtap="like">
       <image src="{{icon}}" class="like" />
