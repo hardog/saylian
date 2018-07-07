@@ -67,9 +67,18 @@ async function listByType(ctx, next) {
 
   let ret = [];
   if (ctype == 3){
+    ret = await Db.select('id', 'title', 'poster', 'learn')
+      .from('group')
+      .limit(size)
+      .offset(startIndex)
+      .orderBy('id', 'desc');
+  }else if(ctype == 4){
     ret = await Db.select(
       'id', 'title', 'path', 'poster', 'meta', 'created_at'
     ).from('videos')
+      .where({
+        groupid: 0
+      })
       .limit(size)
       .offset(startIndex)
       .orderBy('id', 'desc');
@@ -77,7 +86,10 @@ async function listByType(ctx, next) {
     ret = await Db.select(
       'id', 'title', 'poster', 'content', 'path', 'meta', 'type', 'created_at'
     ).from('contents')
-      .where('type', ctype)
+      .where({
+        type: ctype,
+        groupid: 0
+      })
       .limit(size)
       .offset(startIndex)
       .orderBy('id', 'desc');
@@ -88,6 +100,41 @@ async function listByType(ctx, next) {
     data: ret
   };
 }
+
+// 按照groupid 取数据
+async function listByGroupid(ctx, next) {
+  const query = ctx.query;
+  const page = query.page || 1;
+  const size = query.size || 10;
+  const learn = query.learn || 0;
+  const groupid = query.groupid;
+  const startIndex = (page - 1) * size;
+
+  let ret = [];
+  if (learn != 0) {
+    ret = await Db.select(
+      'id', 'title', 'poster', 'content', 'path', 'meta', 'type', 'created_at'
+    ).from('contents')
+      .where('groupid', groupid)
+      .limit(size)
+      .offset(startIndex)
+      .orderBy('id', 'desc');
+  } else {
+    ret = await Db.select(
+      'id', 'title', 'path', 'poster', 'meta', 'created_at'
+    ).from('videos')
+      .where('groupid', groupid)
+      .limit(size)
+      .offset(startIndex)
+      .orderBy('id', 'desc');
+  }
+
+  ctx.body = {
+    status: 'success',
+    data: ret
+  };
+}
+
 
 // 获取未完成任务文章收藏的单词
 async function words(ctx, next) {
@@ -203,6 +250,7 @@ module.exports = {
   words,
   meta,
   listByType,
+  listByGroupid,
   updateVideoMeta,
   queryById
 };

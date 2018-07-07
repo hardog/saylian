@@ -25,6 +25,7 @@ router.get('/user', controllers.user)
 router.get('/contents/queryById', controllers.contents.queryById);
 router.get('/contents/list', controllers.contents.list);
 router.get('/contents/listByType', controllers.contents.listByType); 
+router.get('/contents/listByGroupid', controllers.contents.listByGroupid); 
 router.get('/contents/words', controllers.contents.words);
 router.get('/contents/collects', controllers.contents.collects);
 router.post('/contents/meta', controllers.contents.meta);

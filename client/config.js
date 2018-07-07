@@ -16,6 +16,7 @@ const config = {
         list: `${host}/weapp/contents/list`,
         queryByContentsId: `${host}/weapp/contents/queryById`,
         listByType: `${host}/weapp/contents/listByType`,
+        listByGroupid: `${host}/weapp/contents/listByGroupid`,
         wcollects: `${host}/weapp/contents/collects`,
         words: `${host}/weapp/contents/words`,
         meta: `${host}/weapp/contents/meta`,

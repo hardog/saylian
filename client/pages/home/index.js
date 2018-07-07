@@ -73,12 +73,30 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function (evt) {
+    let shareTitle, path;
+
+    if(evt.from === 'button'){
+      let target = evt.target.dataset.v || {};
+      shareTitle = '这你都听不懂？#' + target.title + '#';
+
+      if (target.type == 1) {
+        path = 'pages/learn/index?id=' + target.id + '&from=share';
+      } else {
+        path = 'pages/share/index?from=share&vid=' + (target.vid || target.path) + '&title=' + target.title + '&poster=' + target.poster;
+      }
+    }
     return {
-      title: '为你打造的专属英语学习帮手，快来学习吧～',
-      path: 'pages/home/index',
-      imageUrl: '../../images/sl.png'
+      title: shareTitle || '为你打造的专属英语学习帮手，快来学习吧～',
+      path: path || 'pages/home/index',
+      imageUrl: App.user.avatarUrl || '../../images/sl.png'
     };
+  },
+
+  touchShare(evt){
+    this.setData({
+      share: evt.detail
+    });
   },
 
   fullscreenHide() {

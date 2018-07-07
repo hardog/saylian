@@ -2,6 +2,19 @@
   width: 750rpx;
   background-color: #f8f8f8;
 }
+.status{
+  margin-left: 25rpx;
+  margin-bottom: 20rpx;
+  font-size: 35rpx;
+  font-family: PingFangSC-Regular;
+  color: #ff6868;
+  display: -webkit-box ;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; 
+}
 .none{
   width: 710rpx;
   background-color: #ffffff;

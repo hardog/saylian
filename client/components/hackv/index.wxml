@@ -1,11 +1,12 @@
 <view class="hackv out-cls">
   <view class="posterWrap" bindtap="goWatch">
     <view class="playWrap"><image src="../../images/play.png" class="play" /></view>
-    <image src="{{prefix}}{{source.poster}}" class="poster" mode="aspectFit"/>
+    <image src="{{prefix}}{{source.poster}}" class="poster" mode="aspectFill"/>
   </view>
   <view class="title-wrap">
     <text class="title twoline">{{source.title}}</text>
     <text wx:if="{{needLearn}}" class="learn-action" bindtap="goLearn">去学习</text>
+    <Share source="{{source}}" />
   </view>
   <Meta source="{{source}}" disable="{{disable}}" ctype="{{ctype}}" />
 </view>

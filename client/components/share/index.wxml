@@ -1,0 +1,4 @@
+<button open-type="share" data-v="{{source}}" hover-class='none' class="share-btn out-cls">
+  <image src="../../images/share.png" class="share" />
+</button>
+

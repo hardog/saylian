@@ -1,13 +1,14 @@
 <scroll-view scroll-y class="home" style="height: {{height}}px">
-  <Daily wx:if="{{daily.sentence}}" source="{{daily}}"/>
+  <text class="status">正在学习 #{{task.title}}#</text>
   <Words wx:if="{{dayAgoWords.length >= 1}}" source="{{dayAgoWords}}" out-cls="marginLeft"/>
   <Article wx:if="{{task.type == 1}}" source="{{task}}" out-cls="marginLeft"/>
   <Hackv bindshow="hackvShow" wx:elif="{{task.type == 2}}" needLearn source="{{task}}" out-cls="marginLeft"/>
+  <Daily wx:if="{{daily.sentence}}" source="{{daily}}"/>
   <view class="none">
     <text class="line">1、可以在【分类】中添加学习任务</text>
-    <text class="line">2、辅助个人学习英语，前期主要专注听力以及词汇量</text>
-    <text class="line">3、学习的过程中，需要多听多读，能够达到不看原文听懂的程度</text>
-    <text class="line" bindtap="goFeatures">4、【查看功能列表】</text>
+    <text class="line">2、学习的过程中，多听多读</text>
+    <text class="line">3、可以随意收藏单词、词组哦</text>
+    <text class="line" bindtap="goFeatures">3、【查看功能列表】</text>
   </view>
 
   <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>

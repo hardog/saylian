@@ -12,6 +12,7 @@ async function create(ctx, next) {
         table.string('path', 100);
         table.string('poster', 200);
         table.string('title', 40);
+        table.bigInteger('groupid');
         table.text('meta');
         table.timestamp('created_at').defaultTo(Db.fn.now());
       });
@@ -36,6 +37,15 @@ async function create(ctx, next) {
         table.timestamp('created_at').defaultTo(Db.fn.now());
       });
       break;
+    case 'group': // 学习分组
+      ctx.body = await Db.schema.createTable('group', function (table) {
+        table.increments();
+        table.string('poster', 200);
+        table.string('title', 40);
+        table.boolean('learn').defaultTo(false);
+        table.timestamp('created_at').defaultTo(Db.fn.now());
+      });
+      break;
     case 'dailyfollow': // 每日一句跟读
       ctx.body = await Db.schema.createTable('dailyfollow', function (table) {
         table.increments();
@@ -53,6 +63,7 @@ async function create(ctx, next) {
         table.string('title', 40);
         table.string('poster', 200);
         table.text('meta');
+        table.bigInteger('groupid');
         table.timestamp('created_at').defaultTo(Db.fn.now());
       });
       break;

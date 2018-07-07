@@ -1,7 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "Meta": "/components/meta/index",
     "Share": "/components/share/index"
   }
 }
