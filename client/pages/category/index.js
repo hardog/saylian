@@ -93,9 +93,11 @@ Page({
     if (evt.from === 'button') {
       let target = evt.target.dataset.v || {};
       shareTitle = '我正在学习#'+target.title + '#快来一起学习吧！';
-
+console.log('target:', target)
       if(target.type == 1){
         path = 'pages/learn/index?id=' + target.id + '&from=share';
+      }else if(target.learn !== undefined){
+        path = 'pages/group/index?from=share&groupid=' + target.id;
       }else{
         path = 'pages/share/index?from=share&vid=' + (target.vid || target.path) + '&title=' + target.title + '&poster=' + target.poster;
       }
