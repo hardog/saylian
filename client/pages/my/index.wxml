@@ -8,7 +8,7 @@
     <image src="../../images/rightarrow.png" class="go"/>
   </view>
   <view class="line" bindtap="goResList">
-    <text class="lineText">获取经典电影资源包</text>
+    <text class="lineText">经典电影资源包</text>
     <image src="../../images/rightarrow.png" class="go"/>
   </view>
   <view class="line" bindtap="goFeatures">
