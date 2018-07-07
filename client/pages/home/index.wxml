@@ -1,5 +1,5 @@
 <scroll-view scroll-y class="home" style="height: {{height}}px">
-  <text class="status">正在学习 #{{task.title}}#</text>
+  <text class="status" wx:if="{{task && task.title}}">正在学习 #{{task.title}}#</text>
   <Words wx:if="{{dayAgoWords.length >= 1}}" source="{{dayAgoWords}}" out-cls="marginLeft"/>
   <Article wx:if="{{task.type == 1}}" source="{{task}}" out-cls="marginLeft"/>
   <Hackv bindshow="hackvShow" wx:elif="{{task.type == 2}}" needLearn source="{{task}}" out-cls="marginLeft"/>
