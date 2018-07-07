@@ -63,6 +63,8 @@ router.post('/assist/feedback', controllers.assist.feedback);
 router.post('/assist/collect', controllers.assist.collect);
 router.post('/assist/comment', controllers.assist.comment);
 router.get('/assist/comments', controllers.assist.comments);
+router.get('/assist/films', controllers.assist.films);
+router.get('/assist/filmscode', controllers.assist.filmsone);
 router.post('/assist/voicescore', koaBody, controllers.assist.voicescore);
 
 // 说练日更接口

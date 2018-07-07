@@ -98,6 +98,14 @@ async function create(ctx, next) {
         table.timestamp('created_at').defaultTo(Db.fn.now());
       });
       break;
+    case 'films':
+      ctx.body = await Db.schema.createTable('films', function (table) {
+        table.increments();
+        table.string('title');
+        table.string('link');
+        table.timestamp('created_at').defaultTo(Db.fn.now());
+      });
+      break;
     case 'rgArticles':
       ctx.body = await Db.schema.createTable('rgArticles', function (table) {
         table.increments();

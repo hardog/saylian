@@ -1,0 +1,12 @@
+<view class="resources" style="height: {{height}}px">
+  <scroll-view scroll-y>
+    <view class="line" wx:for="{{items}}" wx:key="{{index}}">
+      <text class="name">{{item.title}}</text>
+      <button open-type="share" data-v="{{item}}" class="share-get" hover-class='none' bindtap="shareGet">{{item.status ? '分享给好友' : '分享并复制链接'}}</button>
+    </view>
+  </scroll-view>
+  <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>
+  <view class="sticky" bindtap="backHome" wx:if="{{showBack}}">
+    <text class="home">首页</text>
+  </view>
+</view>

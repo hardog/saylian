@@ -7,6 +7,10 @@
     <text class="lineText">我的单词本</text>
     <image src="../../images/rightarrow.png" class="go"/>
   </view>
+  <view class="line" bindtap="goResList">
+    <text class="lineText">获取经典电影资源包</text>
+    <image src="../../images/rightarrow.png" class="go"/>
+  </view>
   <view class="line" bindtap="goFeatures">
     <text class="lineText">功能列表</text>
     <image src="../../images/rightarrow.png" class="go"/>

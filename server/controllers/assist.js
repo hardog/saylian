@@ -38,6 +38,47 @@ async function comments(ctx, next) {
   };
 }
 
+// 获取资源
+async function films(ctx, next) {
+  const query = ctx.query;
+  const page = query.page || 1;
+  const size = query.size || 10;
+  const startIndex = (page - 1) * size;
+
+  const ret = await Db.select(
+    'id', 'title'
+  ).from('films')
+    .limit(size)
+    .offset(startIndex)
+    .orderBy('id', 'desc');
+
+  ctx.body = {
+    status: 'success',
+    data: ret
+  };
+}
+// 获取单个资源
+async function filmsone(ctx, next) {
+  const query = ctx.query;
+  const id = query.id;
+
+  if (!id) {
+    ctx.body = {
+      status: 'fail',
+      errMsg: '缺少查询参数'
+    };
+    return;
+  }
+
+  const ret = await Db.select('link').from('films')
+    .where('id', id);
+
+  ctx.body = {
+    status: 'success',
+    data: ret
+  };
+}
+
 async function comment(ctx, next) {
   const body = ctx.request.body;
   const content = body.content
@@ -206,5 +247,7 @@ module.exports = {
   comment,
   feedback,
   collect,
+  films,
+  filmsone,
   voicescore
 };

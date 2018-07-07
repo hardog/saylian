@@ -10,7 +10,8 @@
     "pages/features/index",
     "pages/check/index",
     "pages/share/index",
-    "pages/group/index"
+    "pages/group/index",
+    "pages/resources/index"
   ],
   "window":{
     "backgroundColor":"#F6F6F6",

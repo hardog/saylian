@@ -90,4 +90,10 @@ Page({
       url: '../../pages/features/index',
     });
   },
+
+  goResList(){
+    wx.navigateTo({
+      url: '../../pages/resources/index',
+    });
+  }
 })
