@@ -96,7 +96,9 @@ Page({
 console.log('target:', target)
       if(target.type == 1){
         path = 'pages/learn/index?id=' + target.id + '&from=share';
-      }else if(target.learn !== undefined){
+      } else if (target.type == 2) {
+        path = 'pages/scene/index?id=' + target.id + '&from=share&uid=' + App.user.uid;
+      } else if(target.learn !== undefined){
         path = 'pages/group/index?from=share&groupid=' + target.id;
       }else{
         path = 'pages/share/index?from=share&vid=' + (target.vid || target.path) + '&title=' + target.title + '&poster=' + target.poster;
