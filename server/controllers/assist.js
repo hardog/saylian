@@ -38,6 +38,47 @@ async function comments(ctx, next) {
   };
 }
 
+// 获取资源
+async function films(ctx, next) {
+  const query = ctx.query;
+  const page = query.page || 1;
+  const size = query.size || 10;
+  const startIndex = (page - 1) * size;
+
+  const ret = await Db.select(
+    'id', 'title'
+  ).from('films')
+    .limit(size)
+    .offset(startIndex)
+    .orderBy('id', 'desc');
+
+  ctx.body = {
+    status: 'success',
+    data: ret
+  };
+}
+// 获取单个资源
+async function filmsone(ctx, next) {
+  const query = ctx.query;
+  const id = query.id;
+
+  if (!id) {
+    ctx.body = {
+      status: 'fail',
+      errMsg: '缺少查询参数'
+    };
+    return;
+  }
+
+  const ret = await Db.select('link').from('films')
+    .where('id', id);
+
+  ctx.body = {
+    status: 'success',
+    data: ret
+  };
+}
+
 async function comment(ctx, next) {
   const body = ctx.request.body;
   const content = body.content
@@ -200,11 +241,43 @@ async function voicescore(ctx, next) {
    };
 }
 
+// record metalog
+async function metalog(ctx, next) {
+  const header = ctx.header || {};
+  const body = ctx.request.body;
+  const contentid = body.contentid;
+  const mtype = body.type || 3;
+  const extra = body.extra;
+  const uid = body.uid || header.sluid;
+
+  if (!contentid) {
+    ctx.body = {
+      status: 'fail',
+      errMsg: '缺少提交参数'
+    };
+    return;
+  }
+
+  const retDb = await Db('metalog').insert({
+    contentid: contentid,
+    userid: uid,
+    type: mtype,
+    extra: extra
+  });
+
+  ctx.body = {
+    status: 'success',
+    data: retDb
+  };
+}
 
 module.exports = {
   comments,
   comment,
   feedback,
   collect,
-  voicescore
+  films,
+  filmsone,
+  voicescore,
+  metalog
 };

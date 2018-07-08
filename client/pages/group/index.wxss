@@ -1,0 +1,74 @@
+.group{
+  width: 750rpx;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+.marginLeft{
+  margin-left: 20rpx;
+}
+.split{
+  width: 750rpx;
+  height: 20rpx;
+  background-color: #f8f8f8;
+}
+.fullscreen{
+  width: 750rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 2;
+}
+.video{
+  width: 750rpx;
+  height: 500rpx;
+}
+.tabs{
+  width: 750rpx;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  background-color: #f0f0f0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab{
+  flex: 1;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.title{
+  font-size: 30rpx;
+  color: #333333;
+  font-family: PingFangSC-Regular;
+}
+.selected{
+  color: #59c83b;
+}
+.sticky{
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #59c83b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.home{
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+}

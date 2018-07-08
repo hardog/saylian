@@ -1,8 +1,8 @@
 .hackv{
   width: 710rpx;
   box-sizing: border-box;
-  margin-top: 20rpx;
-  margin-bottom: 30rpx;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
   background-color: #ffffff;
 }
 .title-wrap{
@@ -63,4 +63,21 @@
 .play{
   width: 60rpx;
   height: 60rpx;
+}
+.share-btn{
+  width: 60rpx;
+  height: 40rpx;
+  padding-left: 0;
+  padding-right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+.share-btn::after{
+  border: 0;
+}
+.share{
+  width: 40rpx;
+  height: 40rpx;
 }

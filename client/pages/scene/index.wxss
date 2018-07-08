@@ -1,0 +1,88 @@
+.learn-wrapper{
+  width: 750rpx;
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+  display: flex;
+}
+.learn{
+  width: 750rpx;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+}
+.line{
+  width: 710rpx;
+  box-sizing: border-box;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 6rpx;
+  margin-bottom: 10rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+.A{
+  background-color: #ff6868;
+}
+.B{
+  background-color: #59c83b;
+}
+.mark{
+  color: #ff6868;
+  font-weight: bold;
+}
+.word{
+  font-size: 35rpx;
+  font-family: PingFangSC-Regular;
+  margin: 3rpx;
+  color: #ffffff;
+  box-sizing: border-box;
+  padding: 4rpx 8rpx;
+}
+.meta{
+  width: 600rpx;
+  margin-left: 30rpx;
+}
+.sticky{
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #59c83b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.home{
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+}
+.comments{
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+}
+.comment{
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx 20rpx;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 5rpx;
+  background-color: #ffffff;
+}
+.avator{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+}
+.commentTxt{
+  flex: 1;
+  margin-left: 15rpx;
+  padding-top: 10rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: #333333;
+}

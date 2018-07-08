@@ -49,3 +49,28 @@
   height: 60rpx;
   margin-right: 20rpx;
 }
+.group-split{
+  margin-top: 40rpx;
+}
+.save{
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20rpx;
+  margin-bottom: 10rpx;
+  background-color: #ffffff;
+}
+.slmark{
+  width: 400rpx;
+}
+.save-to-local{
+  margin-top: 40rpx;
+  color: #59c83b;
+  font-size: 30rpx;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}

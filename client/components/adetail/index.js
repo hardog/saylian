@@ -69,13 +69,13 @@ Component({
         const contentid = (data || {}).contentid;
         if(contentid){
           wx.showModal({
-            content: '不要贪心，还有未完成的任务哦，是否立即去学习？',
+            content: '不要贪心，还有未完成的任务哦，前往首页继续学习？',
             cancelText: '先看看',
             confirmText: '去学习',
             success: (res) => {
               if (res.confirm) {
-                wx.navigateTo({
-                  url: '../../pages/learn/index?id=' + contentid,
+                wx.switchTab({
+                  url: '/pages/home/index'
                 });
               }
             }

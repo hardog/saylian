@@ -13,11 +13,11 @@ Page({
     prefix: Config.cosPrefix,
     height: 1206,
     scrolly: true,
-    tabs: ['短片学习', '精读短文', '随便看看'],
-    items: [[],[],[]],
-    types: [2, 1, 3],
-    page: [1, 1, 1],
-    hasMore: [true, true, true],
+    tabs: ['跟着学', '情景对话', '精读短文', '精彩视频'],
+    items: [[],[],[],[]],
+    types: [3, 2, 1, 4],
+    page: [1, 1, 1, 1],
+    hasMore: [true, true, true, true],
     loaded: {},
     size: 10,
     current: 0,
@@ -72,7 +72,7 @@ Page({
         showed: true,
         loginShow: false
       });
-      this.query(2);
+      this.query(3);
     }
 
     wx.setNavigationBarTitle({
@@ -87,11 +87,26 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function (evt) {
+    let shareTitle, path;
+
+    if (evt.from === 'button') {
+      let target = evt.target.dataset.v || {};
+      shareTitle = '我正在学习#'+target.title + '#快来一起学习吧！';
+console.log('target:', target)
+      if(target.type == 1){
+        path = 'pages/learn/index?id=' + target.id + '&from=share';
+      }else if(target.learn !== undefined){
+        path = 'pages/group/index?from=share&groupid=' + target.id;
+      }else{
+        path = 'pages/share/index?from=share&vid=' + (target.vid || target.path) + '&title=' + target.title + '&poster=' + target.poster;
+      }
+    }
+
     return {
-      title: '学习精美短文视频，助力英语学习更上一层楼',
-      path: 'pages/category/index',
-      imageUrl: '../../images/sl.png'
+      title: shareTitle || '学习精美短文视频，助力英语学习更上一层楼',
+      path: path || 'pages/category/index',
+      imageUrl: App.user.avatarUrl || '../../images/sl.png'
     };
   },
 

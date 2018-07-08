@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "Hackv": "/components/hackv/index",
+    "Login": "/components/login/index",
+    "txv-video": "plugin://tencentvideo/video"
+  }
+}

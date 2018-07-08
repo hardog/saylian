@@ -1,0 +1,10 @@
+<view class="share" style="height: {{height}}px">
+  <txv-video vid="{{vid}}" 
+        playerid="gobaltv" 
+        class="video"
+        autoplay></txv-video>
+  <view class="sticky" bindtap="backHome" wx:if="{{showBack}}">
+    <text class="home">首页</text>
+  </view>
+</view>
+

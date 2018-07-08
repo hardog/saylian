@@ -1,0 +1,29 @@
+<view>
+  <block wx:if="{{started}}" wx:for="{{source}}" wx:key="{{index}}">
+    <view class="line {{index % 2 ? 'B' : 'A'}}">
+      <text class="word AB">{{index % 2 ? 'B' : 'A'}}.</text>
+      <text class="word" 
+        wx:for="{{item.words}}" 
+        bindtap="goTranslate"
+        wx:for-item="word"
+        wx:for-index="vindex"
+        data-v="{{word}}"
+        wx:key="{{vindex}}">{{word}}</text>
+      </view>
+      <view class="translation-wrap" bindtap="getTranslate" data-v="{{item}}">
+        <text class="translation {{index % 2 ? 'B' : 'A'}} {{item.translate ? '' : 'center'}}">{{item.translate || '查看译文'}}</text>
+      </view>
+  </block>
+  <view class="learn-action">
+    <view wx:if="{{!started}}" class="start" bindtap="startLearn">
+      <text class="learn-action-text">开始学习</text>
+    </view>
+    <view wx:else class="end" bindtap="endLearn">
+      <text class="learn-action-text">{{finished ? '恭喜您已完成学习, 继续加油哦' : '我要通关'}}</text>
+    </view>
+  </view>
+  <view class="words" wx:if="{{words.length > 0}}">
+    <text class="mark">收藏的生词:</text>
+    <text class="mword" wx:for="{{words}}" bindtap="goTranslate" data-v="{{item}}" wx:key="{{index}}">{{item}}</text>
+  </view>
+</view>

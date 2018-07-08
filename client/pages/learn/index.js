@@ -16,6 +16,7 @@ Page({
     learn: {},
     startTime: 0,
     height: 1206,
+    justFilm: false,
     showBack: false,
     comments: [],
     hasMore: true,
@@ -29,6 +30,7 @@ Page({
   onLoad: function (options) {
     this.setData({
       id: options.id,
+      justFilm: !!options.film,
       showBack: (options.from === 'share')
     });
 

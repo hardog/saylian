@@ -1,0 +1,8 @@
+<view class="group out-cls">
+  <image bindtap="goLists" src="{{prefix}}{{source.poster}}" class="poster" mode="aspectFill"/>
+  <view class="meta">
+    <text class="title">{{source.title}}</text>
+    <Share source="{{source}}" />
+  </view>
+</view>
+

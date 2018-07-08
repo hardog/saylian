@@ -1,0 +1,21 @@
+<view class="group" style="height: {{height}}px">
+  <scroll-view scroll-y="{{scrolly}}" 
+    bindscrolltolower="reachBottom">
+      <block wx:for="{{items}}" 
+        wx:key="{{index}}">
+        <Hackv bindshow="hackvShow" wx:if="{{item.type}}" source="{{item}}" needLearn out-cls="marginLeft"/>
+        <Hackv bindshow="hackvShow" wx:else source="{{item}}" ctype="videoLike" out-cls="marginLeft" disable="{{['study', 'comment']}}"/>
+        <view class="split" />
+      </block>
+  </scroll-view>
+  <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>
+  <view wx:if="{{flShow}}" bindtap="fullscreenHide" class="fullscreen" style="height: {{height}}px">
+      <txv-video vid="{{currentPath}}" 
+        playerid="gobaltv" 
+        class="video"
+        autoplay="{{true}}"></txv-video>
+  </view>
+  <view class="sticky" bindtap="backHome" wx:if="{{showBack}}">
+    <text class="home">首页</text>
+  </view>
+</view>

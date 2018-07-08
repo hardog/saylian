@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "ADetail": "/components/adetail/index",
+    "Meta": "/components/meta/index",
+    "Box": "/components/box/index",
+    "Audio": "/components/audio/index",
+    "Login": "/components/login/index",
+    "Comment": "/components/comment/index",
+    "txv-video": "plugin://tencentvideo/video"
+  }
+}

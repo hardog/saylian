@@ -1,0 +1,24 @@
+<view style="height: {{height}}px;" class="check">
+  <picker bindchange="bindPickerChange" 
+    class="picker {{index % 2 ? 'B' : 'A'}}" 
+    wx:for="{{sentences}}" 
+    wx:key="{{index}}"
+    data-v="{{index}}" 
+    value="{{index}}" 
+    range="{{selectOrders}}">
+    <text class="sentence">{{item.select ? item.select+'. ': ''}}{{item.sentence}}</text>
+  </picker>
+  <view class="split"></view>
+  <text class="notice">点击句子选择下拉列表数字，数字代表句子的正确顺序！</text>
+  <view class="action">
+    <navigator class="continue" open-type="navigateBack">继续学习</navigator>
+    <view class="submit" bindtap="check">
+      <text class="action-text">提交</text>
+    </view>
+  </view>
+  <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>
+  <view class="sticky" bindtap="backHome" wx:if="{{showBack}}">
+    <text class="home">首页</text>
+  </view>
+</view>
+

@@ -12,7 +12,26 @@ async function create(ctx, next) {
         table.string('path', 100);
         table.string('poster', 200);
         table.string('title', 40);
+        table.bigInteger('groupid');
         table.text('meta');
+        table.timestamp('created_at').defaultTo(Db.fn.now());
+      });
+      break;
+    case 'translation':
+      ctx.body = await Db.schema.createTable('translation', function (table) {
+        table.increments();
+        table.text('translation');
+        table.bigInteger('contentid');
+        table.timestamp('created_at').defaultTo(Db.fn.now());
+      });
+      break;
+    case 'metalog':
+      ctx.body = await Db.schema.createTable('metalog', function (table) {
+        table.increments();
+        table.bigInteger('userid');
+        table.bigInteger('contentid');
+        table.enu('type', ['1', '2', '3']);// 1:观看、2:喜欢 3.分享
+        table.text('extra');// 存储额外信息
         table.timestamp('created_at').defaultTo(Db.fn.now());
       });
       break;
@@ -36,6 +55,15 @@ async function create(ctx, next) {
         table.timestamp('created_at').defaultTo(Db.fn.now());
       });
       break;
+    case 'group': // 学习分组
+      ctx.body = await Db.schema.createTable('group', function (table) {
+        table.increments();
+        table.string('poster', 200);
+        table.string('title', 40);
+        table.boolean('learn').defaultTo(false);
+        table.timestamp('created_at').defaultTo(Db.fn.now());
+      });
+      break;
     case 'dailyfollow': // 每日一句跟读
       ctx.body = await Db.schema.createTable('dailyfollow', function (table) {
         table.increments();
@@ -53,6 +81,7 @@ async function create(ctx, next) {
         table.string('title', 40);
         table.string('poster', 200);
         table.text('meta');
+        table.bigInteger('groupid');
         table.timestamp('created_at').defaultTo(Db.fn.now());
       });
       break;
@@ -84,6 +113,14 @@ async function create(ctx, next) {
         table.bigInteger('userid');
         table.bigInteger('contentid');
         table.boolean('checked').defaultTo(false);
+        table.timestamp('created_at').defaultTo(Db.fn.now());
+      });
+      break;
+    case 'films':
+      ctx.body = await Db.schema.createTable('films', function (table) {
+        table.increments();
+        table.string('title');
+        table.string('link');
         table.timestamp('created_at').defaultTo(Db.fn.now());
       });
       break;

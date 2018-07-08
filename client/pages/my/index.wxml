@@ -7,6 +7,10 @@
     <text class="lineText">我的单词本</text>
     <image src="../../images/rightarrow.png" class="go"/>
   </view>
+  <view class="line" bindtap="goResList">
+    <text class="lineText">经典电影资源包</text>
+    <image src="../../images/rightarrow.png" class="go"/>
+  </view>
   <view class="line" bindtap="goFeatures">
     <text class="lineText">功能列表</text>
     <image src="../../images/rightarrow.png" class="go"/>
@@ -14,6 +18,14 @@
   <view class="line" bindtap="goFeedback">
     <text class="lineText">去反馈</text>
     <image src="../../images/rightarrow.png" class="go"/>
+  </view>
+  <view class="save group-split" bindtap="saveToLocal" data-v="{{'sl-wechat.jpg'}}">
+    <image src="{{prefix}}sl-wechat.jpg" mode="widthFix" class="slmark"/>
+    <text class="save-to-local">点击图片保存到本地加群学习（群里分享学习资源、交流学习心得）</text>
+  </view>
+  <view class="save" bindtap="saveToLocal" data-v="{{'sl-share.jpg'}}">
+    <image src="{{prefix}}sl-share.jpg" mode="widthFix" class="slmark"/>
+    <text class="save-to-local">点击图片保存到本地分享</text>
   </view>
   <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>
 </view>

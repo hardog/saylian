@@ -73,12 +73,31 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function (evt) {
+    let shareTitle, path;
+
+    if(evt.from === 'button'){
+      let target = evt.target.dataset.v || {};
+
+      if (target.type == 1) {
+        shareTitle = '学完这一篇搞定老外～#' + target.title + '#';
+        path = 'pages/learn/index?id=' + target.id + '&from=share';
+      } else {
+        shareTitle = '情景对话，出国旅游、出差So Easy!#' + target.title + '#';
+        path = 'pages/scene/index?from=share&id=' + target.id + '&uid=' + App.user.uid;
+      }
+    }
     return {
-      title: '为你打造的专属英语学习帮手，快来学习吧～',
-      path: 'pages/home/index',
-      imageUrl: '../../images/sl.png'
+      title: shareTitle || '为你打造的专属英语学习帮手，快来学习吧～',
+      path: path || 'pages/home/index',
+      imageUrl: App.user.avatarUrl || '../../images/sl.png'
     };
+  },
+
+  touchShare(evt){
+    this.setData({
+      share: evt.detail
+    });
   },
 
   fullscreenHide() {

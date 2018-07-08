@@ -1,0 +1,59 @@
+.resources{
+  width: 750rpx;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+
+.line{
+  width: 710rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name{
+  flex: 1;
+  display: -webkit-box ;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; 
+  font-size: 40rpx;
+  font-family: PingFangSC-Regular;
+  color: #666;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+}
+
+.share-get{
+  margin-left: 10rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+}
+.ok{
+  color: #59c83b;
+}
+.nok{
+  color: #ff6868;
+}
+.share-get::after{
+  border: 0;
+}
+
+.sticky{
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #59c83b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.home{
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+}

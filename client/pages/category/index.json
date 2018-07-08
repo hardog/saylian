@@ -2,6 +2,8 @@
   "usingComponents": {
     "Article": "/components/article/index",
     "Hackv": "/components/hackv/index",
+    "Scene": "/components/scene/index",
+    "Group": "/components/group/index",
     "Login": "/components/login/index",
     "txv-video": "plugin://tencentvideo/video"
   }

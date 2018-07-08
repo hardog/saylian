@@ -17,11 +17,13 @@ const request = (api, data, cb, method) => {
     data: reqData,
     method: method || 'GET',
     success: (res) => {
+      // 忽略本次请求
+      if(res.data.ignore){return;}
       if (res.statusCode === 200
         && res.data.status === 'success') {
         cb && cb((res.data || {}).data);
       } else {
-        wx.showToast({ title: `出错咯(${(res.data || {}).errMsg || ''})`, icon: 'none' });
+        wx.showToast({ title: `Sorry(${(res.data || {}).errMsg || ''})`, icon: 'none' });
       }
     },
     fail: (err) => {

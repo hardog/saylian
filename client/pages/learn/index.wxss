@@ -84,14 +84,14 @@
   background-color: #ffffff;
 }
 .avator{
-  width: 100rpx;
-  height: 100rpx;
-  border-radius: 50rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
 }
 .commentTxt{
   flex: 1;
   margin-left: 15rpx;
-  padding-top: 25rpx;
+  padding-top: 10rpx;
   font-size: 30rpx;
   font-family: PingFangSC-Regular;
   color: #333333;
