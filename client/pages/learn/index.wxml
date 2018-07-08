@@ -3,6 +3,7 @@
   bindscrolltolower="loadMoreComment"
   style="height: {{height}}px" 
   class="learn {{learn.type == 2 ? 'videoPadding' : 'articlePadding'}}">
+    <image wx:if="{{learn.poster}}" src="{{prefix}}{{learn.poster}}" class="poster" mode="aspectFill"/>
     <ADetail contentid="{{id}}" source="{{contents}}" words="{{words}}"/>
     <Comment contentid="{{id}}" bindcommentOk="updateComments"/>
     <view class="comments">

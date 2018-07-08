@@ -4,6 +4,11 @@
   box-sizing: border-box;
   display: flex;
 }
+.poster{
+  width: 710rpx;
+  height: 350rpx;
+  margin-left: 20rpx;
+}
 .learn{
   width: 750rpx;
   background-color: #f8f8f8;
