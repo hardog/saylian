@@ -1,8 +1,8 @@
 .hackv{
   width: 710rpx;
   box-sizing: border-box;
-  margin-top: 20rpx;
-  margin-bottom: 30rpx;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
   background-color: #ffffff;
 }
 .title-wrap{

@@ -30,6 +30,9 @@ router.get('/contents/words', controllers.contents.words);
 router.get('/contents/collects', controllers.contents.collects);
 router.post('/contents/meta', controllers.contents.meta);
 router.post('/contents/updateVideoMeta', controllers.contents.updateVideoMeta);
+// scene
+router.get('/contents/translation', controllers.contents.translation);
+
 
 // task
 router.get('/task/hasTask', controllers.task.hasTask);
@@ -66,6 +69,7 @@ router.get('/assist/comments', controllers.assist.comments);
 router.get('/assist/films', controllers.assist.films);
 router.get('/assist/filmscode', controllers.assist.filmsone);
 router.post('/assist/voicescore', koaBody, controllers.assist.voicescore);
+router.post('/assist/metalog', controllers.assist.metalog);
 
 // 说练日更接口
 router.get('/rg/list', controllers.article.list);
@@ -73,6 +77,5 @@ router.get('/rg/detail', controllers.article.detail);
 router.post('/rg/collect', controllers.article.collect);
 router.post('/rg/comment', controllers.article.comment);
 router.get('/rg/comments', controllers.article.comments);
-
 
 module.exports = router

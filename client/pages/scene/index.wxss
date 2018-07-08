@@ -9,49 +9,39 @@
   background-color: #f8f8f8;
   box-sizing: border-box;
 }
-.articlePadding{
-  padding-top: 100rpx;
+.line{
+  width: 710rpx;
+  box-sizing: border-box;
+  padding: 10rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 6rpx;
+  margin-bottom: 10rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
 }
-.videoPadding{
-  padding-top: 520rpx;
+.A{
+  background-color: #ff6868;
+}
+.B{
+  background-color: #59c83b;
+}
+.mark{
+  color: #ff6868;
+  font-weight: bold;
+}
+.word{
+  font-size: 35rpx;
+  font-family: PingFangSC-Regular;
+  margin: 3rpx;
+  color: #ffffff;
+  box-sizing: border-box;
+  padding: 4rpx 8rpx;
 }
 .meta{
   width: 600rpx;
   margin-left: 30rpx;
-}
-.action{
-  width: 750rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 10rpx 20rpx;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #f8f8f8;
-}
-.videoAction{
-  width: 750rpx;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #f8f8f8;
-}
-.videoMeta{
-  width: 710rpx;
-  margin-left: 20rpx;
-}
-.video{
-  width: 760rpx;
-  height: 420rpx;
-  margin-bottom: 10rpx;
 }
 .sticky{
   width: 750rpx;

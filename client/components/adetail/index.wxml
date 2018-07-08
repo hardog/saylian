@@ -19,7 +19,7 @@
     </view>
   </view>
   <view class="words" wx:if="{{words.length > 0}}">
-    <text class="mark">生词复习:</text>
+    <text class="mark">收藏的生词:</text>
     <text class="word" wx:for="{{words}}" bindtap="goTranslate" data-v="{{item}}" wx:key="{{index}}">{{item}}</text>
   </view>
 </view>

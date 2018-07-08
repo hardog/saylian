@@ -5,6 +5,7 @@
     "Words": "/components/words/index",
     "Login": "/components/login/index",
     "Hackv": "/components/hackv/index",
+    "Scene": "/components/scene/index",
     "txv-video": "plugin://tencentvideo/video"
   }
 }

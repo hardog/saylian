@@ -1,5 +1,5 @@
 // 此处主机域名修改成腾讯云解决方案分配的域名
-const host = 'https://280812961.uva-lover.cn';//'https://cvodwuls.qcloud.la'; //
+const host = 'https://280812961.uva-lover.cn';// 'https://cvodwuls.qcloud.la'; //
 const cos = 'https://uva-1256719691.cos.ap-shanghai.myqcloud.com/';
 const config = {
     title: '成长在于每天的积累',
@@ -21,6 +21,10 @@ const config = {
         words: `${host}/weapp/contents/words`,
         meta: `${host}/weapp/contents/meta`,
         updateVideoMeta: `${host}/weapp/contents/updateVideoMeta`,
+
+        // scene
+        sceneTranslate: `${host}/weapp/contents/translation`,
+        metalog: `${host}/weapp/assist/metalog`,
 
         // task 相关
         updateTaskTime: `${host}/weapp/task/updateTaskTime`,

@@ -5,6 +5,7 @@ Page({
   
   data: {
     height: 1206,
+    prefix: Config.cosPrefix,
     userInfo: {},
     loginShow: false,
     showed: false
@@ -95,5 +96,23 @@ Page({
     wx.navigateTo({
       url: '../../pages/resources/index',
     });
+  },
+
+  saveToLocal(evt){
+    const target = evt.currentTarget.dataset.v || {};
+    wx.getImageInfo({
+      src: `${this.data.prefix}${target}`, 
+      success: (ret) => {
+        wx.saveImageToPhotosAlbum({
+          filePath: ret.path,
+          success: () => {
+            wx.showToast({title: '保存成功', icon: 'none'});
+          }
+        })
+      },
+      fail: (e) => {
+        console.log('err:', e)
+      }
+    })
   }
 })

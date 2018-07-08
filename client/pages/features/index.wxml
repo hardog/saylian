@@ -1,8 +1,9 @@
 <view class="features">
   <text class="version">【0.2.0】 2018-07-10</text>
   <text class="line">1、新增分组功能</text>
+  <text class="line">2、新增情景对话及翻译</text>
   <text class="line">2、分享更便捷</text>
-  <text class="line">3、首页模块顺序调整</text>
+  <text class="line">3、首页模块顺序调整，优先展示学习任务</text>
 
   <text class="version">【0.1.6】 2018-06-27</text>
   <text class="line">1、缺陷修复(分享图片修改、分享后评论按钮被遮挡等）</text>

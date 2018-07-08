@@ -244,6 +244,48 @@ async function meta(ctx, next) {
   };
 }
 
+// 获取翻译信息
+async function translation(ctx, next) {
+  const header = ctx.header || {};
+  const uid = header.sluid;
+  const query = ctx.query;
+  const contentid = query.contentid
+
+  if (!contentid) {
+    ctx.body = {
+      status: 'fail',
+      errMsg: '缺少参数(contentid)'
+    };
+    return;
+  }
+
+  const retAvaliable = await Db('metalog')
+    .select('id')
+    .where({
+      userid: uid,
+      type: 3,
+      contentid: contentid
+    });
+
+  if (retAvaliable.length < 1){
+    ctx.body = {
+      status: 'fail',
+      errMsg: '分享被点击后才可查看译文哦',
+      data: []
+    };
+    return;
+  }
+
+  const ret = await Db('translation')
+    .select('id', 'translation')
+    .where('contentid', contentid);
+
+  ctx.body = {
+    status: 'success',
+    data: ret
+  };
+}
+
 module.exports = {
   list,
   collects,
@@ -252,5 +294,6 @@ module.exports = {
   listByType,
   listByGroupid,
   updateVideoMeta,
-  queryById
+  queryById,
+  translation
 };

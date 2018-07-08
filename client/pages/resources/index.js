@@ -46,7 +46,6 @@ Page({
     wx.setNavigationBarTitle({
       title: '资源列表'
     });
-
     
     const user = App.user || {};
     if (user.uid && user.token && user.openid) {
@@ -54,11 +53,20 @@ Page({
       this.setData({ loginShow: false });
     } else {
       this.setData({ loginShow: true });
-      const copyed = wx.getStorageSync('sl-copy');
-      if (copyed == 1) {
+      const copyed = parseInt(wx.getStorageSync('sl-copy'), 10);
+      if (copyed && copyed != 0 ) {
+        const tmpItems = this.data.items;
+        tmpItems[copyed - 1] = Object.assign(tmpItems[copyed - 1], {
+          status: 'ok'
+        });
+        this.setData({items: tmpItems});
         wx.showToast({ title: '已复制', icon: 'none' });
       }
     }
+  },
+  onHide(){},
+  onUnload(){
+    wx.setStorage({ key: 'sl-copy', data: '' });
   },
 
   /**
@@ -86,14 +94,14 @@ Page({
   },
 
   shareGet(evt){
-    wx.setStorage({ key: 'sl-copy', data: 0 });
+    wx.setStorage({ key: 'sl-copy', data: '' });
     const target = evt.currentTarget.dataset.v || {};
 
     this.querLink(target.id, (data) => {
       wx.setClipboardData({
         data: (data[0] || {}).link,
         success: (res) => {
-          wx.setStorage({ key: 'sl-copy', data: 1 });
+          wx.setStorage({ key: 'sl-copy', data: target.index });
         }
       })
     })
@@ -114,16 +122,16 @@ Page({
     },
     (data) => {
       wx.hideLoading();
-      const copyed = wx.getStorageSync('sl-copy');
-      if (copyed == 1) {
+      const copyed = parseInt(wx.getStorageSync('sl-copy'), 10);
+      if (copyed && copyed != 0) {
         wx.showToast({ title: '已复制', icon: 'none' });
       }
 
       let len = data.length;
       for(let i = 0; i < len; i++){
         data[i] = Object.assign(data[i], {
-          index: i,
-          status: false
+          index: i + 1,
+          status: (i + 1 === copyed ? 'ok' : false)
         });
       }
       this.setData({ items: data })

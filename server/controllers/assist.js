@@ -241,6 +241,35 @@ async function voicescore(ctx, next) {
    };
 }
 
+// record metalog
+async function metalog(ctx, next) {
+  const header = ctx.header || {};
+  const body = ctx.request.body;
+  const contentid = body.contentid;
+  const mtype = body.type || 3;
+  const extra = body.extra;
+  const uid = body.uid || header.sluid;
+
+  if (!contentid) {
+    ctx.body = {
+      status: 'fail',
+      errMsg: '缺少提交参数'
+    };
+    return;
+  }
+
+  const retDb = await Db('metalog').insert({
+    contentid: contentid,
+    userid: uid,
+    type: mtype,
+    extra: extra
+  });
+
+  ctx.body = {
+    status: 'success',
+    data: retDb
+  };
+}
 
 module.exports = {
   comments,
@@ -249,5 +278,6 @@ module.exports = {
   collect,
   films,
   filmsone,
-  voicescore
+  voicescore,
+  metalog
 };

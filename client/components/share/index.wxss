@@ -1,12 +1,13 @@
 .share-btn{
-  width: 60rpx;
+  width: 70rpx;
   height: 40rpx;
   padding-left: 0;
   padding-right: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   background-color: #ffffff;
+  box-sizing: border-box;
 }
 .share-btn::after{
   border: 0;

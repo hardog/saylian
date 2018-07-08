@@ -23,9 +23,9 @@
               wx:for-item="v"
               wx:key="{{vindex}}">
               <Article wx:if="{{v.type == 1}}" source="{{v}}" out-cls="marginLeft"/>
-              <Hackv bindshow="hackvShow" bindshare="touchShare" wx:elif="{{v.type == 2}}" source="{{v}}" needLearn out-cls="marginLeft"/>
+              <Scene wx:elif="{{v.type == 2}}" source="{{v}}" out-cls="marginLeft"/>
                <Group wx:elif="{{v.learn !== undefined}}" source="{{v}}" out-cls="marginLeft"/> 
-              <Hackv bindshow="hackvShow" bindshare="touchShare"  wx:else source="{{v}}" ctype="videoLike" out-cls="marginLeft" disable="{{['study', 'comment']}}"/>
+              <Hackv bindshow="hackvShow"  wx:else source="{{v}}" ctype="videoLike" out-cls="marginLeft" disable="{{['study', 'comment']}}"/>
             </block>
             <view class="holdBottom"/>
         </scroll-view>

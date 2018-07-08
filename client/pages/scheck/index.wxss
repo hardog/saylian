@@ -1,0 +1,96 @@
+.check{
+  background-color: #f8f8f8;
+  padding-top: 20rpx;
+}
+.sentences{
+  display: flex;
+  width: 750rpx;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #ffffff;
+}
+.A{
+  background-color: #ff6868;
+}
+.B{
+  background-color: #59c83b;
+}
+.picker{
+  width: 710rpx;
+  margin-left: 20rpx;
+  display: flex;
+  margin-bottom: 10rpx;
+  border-radius: 6rpx;
+  box-sizing: border-box;
+  
+}
+
+.sentence{
+  width: 710rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+  color: #ffffff;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.action{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20rpx;
+}
+.continue,
+.submit{
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.split{
+  width: 750rpx;
+  height: 40rpx;
+}
+.notice{
+  color: #ff6868;
+  font-size: 20rpx;
+  margin-left: 20rpx;
+}
+.continue{
+  width: 150rpx;
+  background-color: #ff6868;
+  font-size: 30rpx;
+  color: #ffffff;
+}
+.submit{
+  width: 550rpx;
+  margin-left: 10rpx;
+  background-color: #59c83b;
+}
+.action-text{
+  font-size: 30rpx;
+  color: #ffffff;
+}
+.sticky{
+  width: 750rpx;
+  height: 100rpx;
+  background-color: #59c83b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.home{
+  font-size: 30rpx;
+  font-family: PingFangSC-Regular;
+  color: #ffffff;
+}

@@ -78,12 +78,13 @@ Page({
 
     if(evt.from === 'button'){
       let target = evt.target.dataset.v || {};
-      shareTitle = '这你都听不懂？#' + target.title + '#';
 
       if (target.type == 1) {
+        shareTitle = '学完这一篇搞定老外～#' + target.title + '#';
         path = 'pages/learn/index?id=' + target.id + '&from=share';
       } else {
-        path = 'pages/share/index?from=share&vid=' + (target.vid || target.path) + '&title=' + target.title + '&poster=' + target.poster;
+        shareTitle = '情景对话，出国旅游、出差So Easy!#' + target.title + '#';
+        path = 'pages/scene/index?from=share&id=' + target.id + '&uid=' + App.user.uid;
       }
     }
     return {

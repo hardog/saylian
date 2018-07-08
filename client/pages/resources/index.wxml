@@ -2,7 +2,7 @@
   <scroll-view scroll-y>
     <view class="line" wx:for="{{items}}" wx:key="{{index}}">
       <text class="name">{{item.title}}</text>
-      <button open-type="share" data-v="{{item}}" class="share-get" hover-class='none' bindtap="shareGet">分享并复制链接</button>
+      <button open-type="share" data-v="{{item}}" class="share-get {{item.status ? 'ok' : 'nok'}}" hover-class='none' bindtap="shareGet">{{item.status ? '已复制链接' : '分享并复制链接'}}</button>
     </view>
   </scroll-view>
   <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>

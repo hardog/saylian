@@ -2,13 +2,14 @@
   <text class="status" wx:if="{{task && task.title}}">正在学习 #{{task.title}}#</text>
   <Words wx:if="{{dayAgoWords.length >= 1}}" source="{{dayAgoWords}}" out-cls="marginLeft"/>
   <Article wx:if="{{task.type == 1}}" source="{{task}}" out-cls="marginLeft"/>
-  <Hackv bindshow="hackvShow" wx:elif="{{task.type == 2}}" needLearn source="{{task}}" out-cls="marginLeft"/>
+  <Scene wx:elif="{{task.type == 2}}" source="{{task}}" out-cls="marginLeft"/>
   <Daily wx:if="{{daily.sentence}}" source="{{daily}}"/>
   <view class="none">
     <text class="line">1、可以在【分类】中添加学习任务</text>
     <text class="line">2、学习的过程中，多听多读</text>
     <text class="line">3、可以随意收藏单词、词组哦</text>
-    <text class="line" bindtap="goFeatures">3、【查看功能列表】</text>
+    <text class="line">4、情景对话，双语阅读，出差、旅游都搞定</text>
+    <text class="line" bindtap="goFeatures">5、【查看功能列表】</text>
   </view>
 
   <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>

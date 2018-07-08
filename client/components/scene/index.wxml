@@ -1,0 +1,8 @@
+<view class="article out-cls">
+  <view class="title-wrap">
+    <text class="title twoline">{{source.title}}</text>
+    <text class="origin" bindtap="goLearn">去学习</text>
+    <Share source="{{source}}" />
+  </view>
+</view>
+

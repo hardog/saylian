@@ -17,6 +17,24 @@ async function create(ctx, next) {
         table.timestamp('created_at').defaultTo(Db.fn.now());
       });
       break;
+    case 'translation':
+      ctx.body = await Db.schema.createTable('translation', function (table) {
+        table.increments();
+        table.text('translation');
+        table.bigInteger('contentid');
+        table.timestamp('created_at').defaultTo(Db.fn.now());
+      });
+      break;
+    case 'metalog':
+      ctx.body = await Db.schema.createTable('metalog', function (table) {
+        table.increments();
+        table.bigInteger('userid');
+        table.bigInteger('contentid');
+        table.enu('type', ['1', '2', '3']);// 1:观看、2:喜欢 3.分享
+        table.text('extra');// 存储额外信息
+        table.timestamp('created_at').defaultTo(Db.fn.now());
+      });
+      break;
     case 'words':
       ctx.body = await Db.schema.createTable('words', function (table) {
         table.increments();

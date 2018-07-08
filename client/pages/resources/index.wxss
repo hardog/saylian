@@ -30,6 +30,11 @@
   margin-left: 10rpx;
   font-size: 30rpx;
   font-family: PingFangSC-Regular;
+}
+.ok{
+  color: #59c83b;
+}
+.nok{
   color: #ff6868;
 }
 .share-get::after{

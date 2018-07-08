@@ -1,0 +1,21 @@
+<view style="height: {{height}}px" class="learn-wrapper">
+  <scroll-view scroll-y="{{true}}" 
+  bindscrolltolower="loadMoreComment"
+  style="height: {{height}}px" 
+  class="learn">
+    <Meta source="{{learn}}" ctype="contentLike"/>
+    <Box source="{{contents}}" words="{{words}}" contentid="{{id}}"/>
+    <Comment contentid="{{id}}" bindcommentOk="updateComments"/>
+    <view class="comments">
+      <view class="comment" wx:for="{{comments}}" wx:key="index">
+        <image src="{{item.avator}}" class="avator"/>
+        <text class="commentTxt">{{item.content}}</text>
+      </view>
+    </view>
+  </scroll-view>
+  <Login wx:if="{{loginShow}}" binduserInfo="onBindUserInfo"/>
+  <view class="sticky" bindtap="backHome" wx:if="{{showBack}}">
+    <text class="home">首页</text>
+  </view>
+</view>
+

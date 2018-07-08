@@ -13,7 +13,7 @@ Page({
     prefix: Config.cosPrefix,
     height: 1206,
     scrolly: true,
-    tabs: ['跟着学', '短片学习', '精读短文', '随便看看'],
+    tabs: ['跟着学', '情景对话', '精读短文', '精彩视频'],
     items: [[],[],[],[]],
     types: [3, 2, 1, 4],
     page: [1, 1, 1, 1],
