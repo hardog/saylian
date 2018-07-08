@@ -4,6 +4,7 @@
   style="height: {{height}}px" 
   class="learn">
     <Meta source="{{learn}}" ctype="contentLike"/>
+    <image wx:if="{{learn.poster}}" src="{{prefix}}{{learn.poster}}" class="poster" mode="aspectFill"/>
     <Box source="{{contents}}" words="{{words}}" contentid="{{id}}"/>
     <Comment contentid="{{id}}" bindcommentOk="updateComments"/>
     <view class="comments">

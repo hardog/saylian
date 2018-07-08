@@ -3,6 +3,13 @@
   padding-bottom: 100rpx;
   box-sizing: border-box;
   display: flex;
+  overflow: hidden;
+  flex-direction: row;
+}
+.poster{
+  width: 710rpx;
+  height: 350rpx;
+  margin-left: 20rpx;
 }
 .learn{
   width: 750rpx;
