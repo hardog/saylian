@@ -197,18 +197,30 @@ async function addFollow(ctx, next) {
     });
   });
 
-  const retInsert = await Db('dailyfollow')
-    .insert({
-      userid,
-      dailyid,
-      path,
-      like: 0
+  const retQuery = await Db('dailyfollow')
+    .select('id')
+    .where({
+      userid, dailyid
     });
 
+  let retUpdate;
+  if (retQuery.length >= 1){
+    retUpdate = await Db('dailyfollow')
+      .where('id', retQuery[0].id)
+      .update({ path });
+  }else{
+    retUpdate = await Db('dailyfollow')
+      .insert({
+        userid,
+        dailyid,
+        path,
+        like: 0
+      });
+  }
 
   ctx.body = {
     status: 'success',
-    data: { ret, retInsert, path }
+    data: { ret, retUpdate, path }
   };
 }
 

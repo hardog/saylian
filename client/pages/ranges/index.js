@@ -156,7 +156,7 @@ Page({
     }, 'POST');
   },
 
-  queryFollows() {
+  queryFollows(reset) {
     if (!this.data.id) { return; }
     Utils.request(Config.service.follows, {
       page: this.data.page,
@@ -168,7 +168,12 @@ Page({
         hasMore = false;
       }
 
-      const follows = this.data.follows.concat(this.parseUserInfo(data));
+      let follows = [];
+      if (reset){
+        follows = this.parseUserInfo(data);
+      }else{
+        follows = this.data.follows.concat(this.parseUserInfo(data));
+      }
       this.setData({ follows, hasMore });
     });
   },
@@ -236,9 +241,10 @@ Page({
   },
 
   listen(){
-    if (!this.data.voiceFilePath){
-      wx.showToast({title: '请先完成录音', icon: 'none'});
-      return;
+    if (this.data.readingText) {
+      this.data.timeHandle && clearInterval(this.data.timeHandle);
+      this.data.recordManager.stop();
+      this.setData({ readingText: '' });
     }
 
     if(this.data.isListening){
@@ -251,7 +257,7 @@ Page({
 
   submit(){
     wx.uploadFile({
-      url: Config.service.addFollow, //仅为示例，非真实的接口地址
+      url: Config.service.addFollow,
       filePath: this.data.voiceFilePath,
       name: 'follow',
       header: {
@@ -266,16 +272,8 @@ Page({
         const d = JSON.parse(ret.data);
         if (d.status === 'success' && d.data.retInsert[0]){
           wx.showToast({title: '提交成功', icon: 'none'});
-          const follows = this.data.follows.concat([{
-            id: d.data.retInsert[0],
-            index: this.data.follows.length,
-            like: 0,
-            path: d.data.path,
-            thumbed: false,
-            nick: (App.user || {}).nickName,
-            avator: (App.user || {}).avatarUrl,
-          }]);
-          this.setData({ follows, curUserFollowed: 1 });
+          this.queryFollows(true);
+          this.setData({ curUserFollowed: 1 });
         }else{
           wx.showToast({ title: '抱歉失败了，稍后再试哦~', icon: 'none' });
         }
