@@ -105,7 +105,7 @@ Page({
    */
   onShareAppMessage: function () {
     return {
-      title: '敢不敢跟我比比谁的发音更棒～',
+      title: '[每日一句] ' + this.data.daily.translate,
       path: 'pages/ranges/index?id='+this.data.id+'&from=share',
       imageUrl: '../../images/sl.png'
     };
@@ -241,10 +241,8 @@ Page({
   },
 
   listen(){
-    if (this.data.readingText) {
-      this.data.timeHandle && clearInterval(this.data.timeHandle);
-      this.data.recordManager.stop();
-      this.setData({ readingText: '' });
+    if (!this.data.voiceFilePath) {
+      return wx.showToast({title: '请先完成录音哦', icon: 'none'});
     }
 
     if(this.data.isListening){

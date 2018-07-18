@@ -203,13 +203,13 @@ async function addFollow(ctx, next) {
       userid, dailyid
     });
 
-  let retUpdate;
+  let retInsert;
   if (retQuery.length >= 1){
-    retUpdate = await Db('dailyfollow')
+    retInsert = await Db('dailyfollow')
       .where('id', retQuery[0].id)
       .update({ path });
   }else{
-    retUpdate = await Db('dailyfollow')
+    retInsert = await Db('dailyfollow')
       .insert({
         userid,
         dailyid,
@@ -220,7 +220,7 @@ async function addFollow(ctx, next) {
 
   ctx.body = {
     status: 'success',
-    data: { ret, retUpdate, path }
+    data: { ret, retInsert, path }
   };
 }
 
